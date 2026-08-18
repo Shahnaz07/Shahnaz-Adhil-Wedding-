@@ -16,11 +16,11 @@ function showSlide(n) {
   heroImage.style.opacity = "0";
 
   setTimeout(() => {
-    heroImage.style.backgroundImage = 'url("${slides[current]}")';
+    heroImage.style.backgroundImage = url("${slides[current]}");
     heroImage.style.opacity = "1";
   }, 180);
 
-  slideNumber.textContent = '${String(current + 1).padStart(2, "0")} / 03';
+  slideNumber.textContent = ${String(current + 1).padStart(2, "0")} / 03;
 
   lineEls.forEach((el, i) => {
     el.classList.toggle("active", i === current);
